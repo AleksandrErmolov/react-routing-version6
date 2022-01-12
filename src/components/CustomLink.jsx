@@ -3,9 +3,9 @@ import { Link, useMatch } from 'react-router-dom'
 
 export default function CustomLink({ children, to, ...props }) {
     
+    //Получает адрес страницы и делает её ссылкой активной...
     const match = useMatch(to);
-    console.log(match)
-
+    
     return (
         <Link
             to={to}
