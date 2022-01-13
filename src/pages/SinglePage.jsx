@@ -12,6 +12,8 @@ export default function SinglePage() {
     const [post, setPost] = useState(null);
 
     const goBack = () => navigate(-1)
+    const goHome = () => navigate('/', {replace:true})
+
 
     useEffect(() => {
         fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
@@ -23,6 +25,8 @@ export default function SinglePage() {
         <div>
 
             <button onClick={goBack}> Go back </button>
+            <button onClick={goHome}> Go home </button>
+
             {post && (
                 <>
                     <h1>{post.title}</h1>
